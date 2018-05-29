@@ -1,0 +1,249 @@
+#header .login { display: none; }
+
+
+#content {
+    background: #24241E;
+    color: #666;
+}
+    #content h1 {
+        font: 24px/30px 'CenturyGothicRegular',Tahoma,Arial,sans-serif;
+        color: #DDD;
+        padding: 0;
+    }
+    #content h2 {
+        font: 20px/30px 'CenturyGothicRegular',Tahoma,Arial,sans-serif;
+        color: #DDD;
+        padding: 0;
+        background: none;
+    }
+    #content a {
+        color: #888;
+    }
+        #content a:hover {
+            color: #FFF;
+        }
+
+#content.background-1 {
+    background: #24241E url(/web/20171224172444im_/https://webasset-akm.imvu.com/asset/58eb69ca00796676/fd/img/bg_login20131203_01.jpg) 0 bottom no-repeat;
+}
+
+#content.background-2 {
+    background: #24241E url(/web/20171224172444im_/https://webasset-akm.imvu.com/asset/60f98f2e6688f74e/fd/img/bg_login20131203_02.jpg) 0 bottom no-repeat;
+}
+
+#content.background-3 {
+    background: #24241E url(/web/20171224172444im_/https://webasset-akm.imvu.com/asset/ec168a5d8c32774f/fd/img/bg_login20131203_03.jpg) 0 bottom no-repeat;
+}
+
+#content.background-4 {
+    background: #24241E url(/web/20171224172444im_/https://webasset-akm.imvu.com/asset/f8ad9b1447f6e9b3/fd/img/bg_login20131203_04.jpg) 0 bottom no-repeat;
+}
+
+form {
+    float: left;
+    width: 570px;
+    height: auto !important;
+    min-height: 300px;
+    height: 300px;
+}
+
+.formsection {
+    background: transparent;
+}
+    .formsection .input label {
+        width: auto;
+        font-weight: normal;
+        color: #FFF;
+        text-align: left;
+        padding-right: 500px;
+    }
+    .formsection button span {
+        position: relative;
+        top: -2px;
+    }
+    .formsection hr{
+        color: grey;
+        background-color: grey;
+        height: 1px;
+        clear: both;
+        width: 320px;
+    }
+    .formsection p,
+    .formsection p.help {
+        padding: 0;
+        font-size: 11px;
+        width: 100%;
+    }
+        .formsection p.notmember {
+            font-size: 12px;
+            color: #888;
+            padding: 20px 0 0 0;
+        }
+            #content .formsection p.notmember a {
+                color: #EEE;
+            }
+    .formsection .input input {
+        background: url(/web/20171224172444im_/https://webasset-akm.imvu.com/asset/03fed2017638732f/fd/img/bg_text_field.png) 0 0 repeat;
+        border: 1px solid #555;
+        color: #FFF;
+        font-size: 16px;
+        padding: 5px 4px;
+        width: 310px;
+    }
+    .formsection .input input:-webkit-autofill {
+        color: black;
+    }
+    .formsection ul {
+        margin-bottom: 20px;
+    }
+    .formsection h2 {
+        clear: both;
+    }
+    .formsection hr {
+        margin-bottom: 15px;
+        float: left;
+    }
+.submit {
+    text-align: left;
+    margin: 10px 0 0;
+}
+
+.mrec {
+    float: left;
+    width: 300px;
+}
+    .mrec p {
+        text-align: center;
+        color: #FFF;
+        text-transform: uppercase;
+        font-size: 10px;
+    }
+
+#captcha {
+    background: transparent;
+    float: none;
+    margin: 0 0 10px 110px;
+    border: 1px solid #555;
+    color: #FFF;
+}
+    #captcha .input label {
+        width: auto;
+    }
+    #captcha .input input {
+        width: 290px;
+    }
+    #captcha p {
+        padding: 0;
+    }
+
+.formsection .password p.help {
+    display: block;
+    width: auto;
+    padding-left: 0px;
+}
+
+#message_stack {
+    border-top:3px solid #fd3;
+    background:#24241e;
+    position:relative;
+    z-index:1;
+    overflow:hidden;
+    _zoom:1;
+}
+
+.top-msg {
+    color:#fff;
+    padding:10px 25px;
+    border-bottom:2px solid #191919;
+    font:116%/1.3em tahoma, arial;
+    overflow:hidden;
+    _zoom:1;
+}
+
+.top-msg .icon {
+    float:left;
+    width:29px;
+    height:28px;
+    background:#e4e4d2 url(/web/20171224172444im_/https://webasset-akm.imvu.com/asset/b0e99a9b8f92b2bf/common/img/sprites/page_message.gif) no-repeat 0 0;
+    margin:0 10px 5px 0;
+}
+
+#error_msg {
+    background:#e4e4d2;
+    color:#72283d;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+#error_msg .text {
+    float:left;
+    margin-top:3px;
+}
+
+#error_msg .icon {
+    background-position:0 -278px;
+    margin-bottom:0;
+    margin-top:0;
+}
+
+#error_msg .text {
+    float:left;
+    margin-top:3px;
+}
+
+#error_msg img {
+    display:none;
+}
+
+#helpdesk {
+    background:#e4e4d2;
+    color:#4e4e48;
+}
+
+#helpdesk a {
+    color:#0c7dd5;
+    text-decoration:underline;
+}
+
+#helpdesk .icon {
+    background-position:0 -162px;
+    margin-top:5px;
+}
+.google_auth_wrapper .enable_google_auth {
+    display: block;
+    color: white;
+    cursor: pointer;
+}
+.google_auth_wrapper.show .enable_google_auth {
+    display: none;
+}
+.google_auth_wrapper label  ,
+.google_auth_wrapper input {
+    display:none;
+}
+.google_auth_wrapper.show label ,
+.google_auth_wrapper.show input {
+    display:block;
+}
+
+/*
+     FILE ARCHIVED ON 17:24:44 Dec 24, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:27:27 May 28, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 802.263 (3)
+  esindex: 0.01
+  captures_list: 923.517
+  CDXLines.iter: 17.829 (3)
+  PetaboxLoader3.datanode: 997.73 (5)
+  exclusion.robots: 0.283
+  exclusion.robots.policy: 0.261
+  RedisCDXSource: 98.027
+  PetaboxLoader3.resolve: 907.442 (2)
+  load_resource: 1201.453
+*/
