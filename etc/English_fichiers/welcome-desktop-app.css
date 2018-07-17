@@ -1,0 +1,1316 @@
+/*css!/common/withme/js/dialog/editProfileImage/EditProfileImageDialog.css*/
+[data-ui-role="modal-dialog"].edit-profile-image-dialog {
+  width: 470px; }
+  [data-ui-role="modal-dialog"].edit-profile-image-dialog .dialog-container[class] {
+    padding: 0;
+    min-height: 430px;
+    max-height: 430px; }
+  [data-ui-role="modal-dialog"].edit-profile-image-dialog .dialog-header a.cta {
+    transition: opacity 0.15s; }
+    [data-ui-role="modal-dialog"].edit-profile-image-dialog .dialog-header a.cta:hover {
+      opacity: 0.75; }
+    [data-ui-role="modal-dialog"].edit-profile-image-dialog .dialog-header a.cta:active {
+      opacity: 0.5625; }
+  [data-ui-role="modal-dialog"].edit-profile-image-dialog .dialog-footer .post {
+    width: 100%; }
+  [data-ui-role="modal-dialog"].edit-profile-image-dialog .custom-profile-input {
+    display: none; }
+
+.mobile [data-ui-role="modal-dialog"].edit-profile-image-dialog .dialog-container[class] {
+  min-height: 100%;
+  max-height: 100%; }
+.mobile [data-ui-role="modal-dialog"].edit-profile-image-dialog .dialog-body {
+  height: calc(100% - 90px);
+  max-height: calc(100% - 90px);
+  padding-bottom: 0; }
+.mobile [data-ui-role="modal-dialog"].edit-profile-image-dialog .dialog-header .back-button {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  transform: translateX(-50%) translateY(-50%);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  cursor: pointer; }
+  .mobile [data-ui-role="modal-dialog"].edit-profile-image-dialog .dialog-header .back-button::before {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .mobile [data-ui-role="modal-dialog"].edit-profile-image-dialog .dialog-header .back-button::before {
+    content: "\e642"; }
+/*css!/common/withme/js/widget/uploadCurtain/UploadCurtain.css*/
+.upload-curtain {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none; }
+  .upload-curtain::before {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .upload-curtain::before {
+    content: "\e641";
+    font-size: 24px;
+    opacity: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 30px;
+    color: #404040;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: all 0.6s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px; }
+  .upload-curtain:not(.loading)::before {
+    opacity: 1;
+    transform: scale(1.2); }
+/*css!/common/withme/js/Dropdown.css*/
+.dropdown {
+  outline: none;
+  box-shadow: inset 0 0 0 1px #d4d4d4;
+  position: relative;
+  background: #fff;
+  height: 40px;
+  color: #404040;
+  line-height: 40px;
+  height: 40px; }
+  .dropdown.is-open {
+    pointer-events: all;
+    position: absolute; }
+    .dropdown.is-open .dropdown-option-list-container {
+      display: block; }
+  .dropdown.dim-no-value .dropdown-label span.no-value, .dropdown.dim-no-value .dropdown-option[data-value=""] {
+    color: #a8a8a8; }
+  .dropdown .dropdown-label {
+    display: block;
+    padding: 0 10px;
+    padding-right: 40px;
+    text-align: initial; }
+    .dropdown .dropdown-label::before {
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .dropdown .dropdown-label::before {
+      content: "\e900";
+      position: absolute;
+      top: 1px;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      font-size: 6px;
+      font-weight: bold;
+      color: #404040; }
+  .dropdown .dropdown-option-list-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    display: none;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    overflow: hidden;
+    z-index: 1; }
+  .dropdown .dropdown-scroll-up, .dropdown .dropdown-scroll-down {
+    transition: opacity 0.15s;
+    z-index: 2;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    pointer-events: none; }
+    .dropdown .dropdown-scroll-up::before, .dropdown .dropdown-scroll-down::before {
+      position: absolute;
+      left: calc(50% - 20px);
+      transform: rotate(90deg);
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      font-size: 10px;
+      font-weight: bold;
+      color: #404040; }
+    .dropdown .dropdown-scroll-up:hover::before, .dropdown .dropdown-scroll-down:hover::before {
+      opacity: 0.75; }
+    .dropdown .dropdown-scroll-up:active::before, .dropdown .dropdown-scroll-down:active::before {
+      opacity: 0.5625; }
+  .dropdown .dropdown-scroll-up {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0; }
+    .dropdown .dropdown-scroll-up::before {
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .dropdown .dropdown-scroll-up::before {
+      content: "\e642"; }
+  .dropdown .dropdown-scroll-down {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    .dropdown .dropdown-scroll-down::before {
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .dropdown .dropdown-scroll-down::before {
+      content: "\e643"; }
+  .dropdown .dropdown-option-list {
+    width: calc(100% + 20px);
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; }
+  .dropdown .dropdown-option {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px; }
+  .dropdown.testing-middle {
+    margin-top: 160px; }
+  .dropdown.testing-bottom {
+    margin-top: 470px; }
+
+body.desktop .dropdown.can-scroll-up .dropdown-scroll-up {
+  opacity: 1;
+  pointer-events: all; }
+body.desktop .dropdown.can-scroll-down .dropdown-scroll-down {
+  opacity: 1;
+  pointer-events: all; }
+
+.dropdown .dropdown-option.is-selected, .dropdown.is-open .dropdown-label:hover, .dropdown.is-open .dropdown-label:hover::before {
+  background: #404040;
+  color: #fff; }
+
+.dropdown .dropdown-label {
+  transition: opacity 0.15s;
+  opacity: 0; }
+.dropdown.is-ready .dropdown-label {
+  opacity: 1; }
+/*css!/common/withme/js/dialog/edit_profile/EditProfileDialog.css*/
+[data-ui-role="modal-dialog"].edit-profile-dialog .dialog-container {
+  height: 470px; }
+[data-ui-role="modal-dialog"].edit-profile-dialog .dialog-body {
+  height: calc(100% - 50px);
+  padding-bottom: 0; }
+[data-ui-role="modal-dialog"].edit-profile-dialog .profile {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: calc(100% - 40px); }
+  [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset {
+    padding: 0 15px 5px; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset legend {
+      margin-bottom: 10px; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset legend.edit-profile-header {
+        text-transform: uppercase;
+        color: #a8a8a8;
+        font-size: 12px;
+        margin: 0 15px 5px; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .change-profile {
+      background: #fff; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .change-profile .change-profile-image {
+        cursor: pointer;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 40px; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .separator {
+      background: #fff; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .separator::before {
+        content: '';
+        display: block;
+        margin: 0 15px;
+        border-bottom: solid 1px #d4d4d4; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset #location {
+      cursor: pointer;
+      color: #a8a8a8; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset textarea {
+      width: 100%;
+      height: 60px;
+      max-height: 80px;
+      overflow-y: auto; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset div.background-container {
+      background-color: #fff;
+      padding: 8px 10px;
+      width: 100%; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset div.background-container::after {
+      clear: both;
+      content: "";
+      display: block; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .dropdown {
+      width: 100%;
+      margin-bottom: 5px;
+      display: block; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .change-icon {
+      color: #deb359;
+      margin-top: 18px;
+      display: inline-block;
+      font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      white-space: nowrap; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .change-profile-image-input {
+      display: none; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .profile-icon, [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .age {
+      float: left; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .age-container {
+      margin-bottom: 10px; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .related-pref {
+      float: right; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .related-pref label {
+        text-indent: -9999em; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .related-pref label.change-icon {
+        text-indent: 0; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .gender .related-pref {
+      margin: 8px 0 -8px; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .affinity {
+      width: 100%;
+      padding: 10px 0; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .affinity .descriptor {
+        display: block;
+        margin-bottom: 10px; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog .profile fieldset .description {
+      color: #a8a8a8;
+      font-size: 12px;
+      max-width: 642px;
+      display: inline-block; }
+[data-ui-role="modal-dialog"].edit-profile-dialog .edit-profile-attribute.not-applicable {
+  display: none; }
+
+[data-ui-role="modal-dialog"].edit-profile-dialog.new-design {
+  max-width: 738px;
+  min-width: 738px; }
+  [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile {
+    text-transform: capitalize; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset {
+      padding: 0; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset:first-of-type {
+        margin-top: 20px; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset textarea {
+        font-size: 15px;
+        padding-left: 15px; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset div.background-container {
+        padding: 12px 15px;
+        font-size: 15px; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .toggle-switch[type=checkbox] + label::before {
+        width: 51px;
+        height: 31px;
+        top: -6px;
+        left: calc(100% - 52px); }
+      [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .toggle-switch[type=checkbox] + label::after {
+        width: 28px;
+        height: 28px;
+        top: -4px;
+        left: calc(100% - 50px); }
+      [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .toggle-switch#profile-checkbox-show-age[type=checkbox] + label {
+        padding-right: 55px; }
+        [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .toggle-switch#profile-checkbox-show-age[type=checkbox] + label::before {
+          top: 10px; }
+        [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .toggle-switch#profile-checkbox-show-age[type=checkbox] + label::after {
+          top: 12px; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .toggle-switch[type=checkbox]:checked + label::after {
+        left: calc(100% - 30px); }
+      [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .dropdown {
+        color: #a8a8a8;
+        height: 44px;
+        line-height: 44px;
+        font-size: 15px;
+        box-shadow: none;
+        margin-bottom: 0; }
+        [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .dropdown .dropdown-label {
+          padding: 0 15px; }
+        [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .dropdown .dropdown-label::before {
+          display: none; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset:not(:first-child) {
+        margin-top: 25px; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .affinity {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 0 15px; }
+        [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .affinity .descriptor {
+          margin-bottom: 0;
+          font-size: 15px; }
+        [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .affinity .dropdown {
+          width: 140px; }
+          [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .affinity .dropdown .dropdown-label {
+            padding: 0; }
+      [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .profile fieldset .textarea-limit {
+        margin-left: 15px; }
+  [data-ui-role="modal-dialog"].edit-profile-dialog.new-design:not(.confirm-dialog) .dialog-x.cancel-button {
+    text-transform: uppercase;
+    font-size: 12px; }
+    [data-ui-role="modal-dialog"].edit-profile-dialog.new-design:not(.confirm-dialog) .dialog-x.cancel-button::before {
+      display: none; }
+  [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .title-outside {
+    position: absolute;
+    left: 300px;
+    top: -55px;
+    color: #fff;
+    font-size: 12px; }
+  [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .header-button {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    padding-bottom: 10px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase; }
+
+@media screen and (max-width: 738px) {
+  .mobile [data-ui-role="modal-dialog"].edit-profile-dialog.new-design {
+    max-width: 100%;
+    min-width: 100%; }
+    .mobile [data-ui-role="modal-dialog"].edit-profile-dialog.new-design .save-profile {
+      bottom: 5px;
+      right: 15px;
+      color: #a8a8a8; } }
+/*css!/common/withme/js/nav/GlobalNav.css*/
+.global-nav {
+  transform: translateZ(0);
+  display: flex;
+  justify-content: center;
+  z-index: 400;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  background: #404040;
+  color: #fff;
+  padding: 0 15px;
+  width: 100%; }
+  .global-nav .system-tray {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row; }
+    .global-nav .system-tray > div {
+      height: 50px;
+      margin-right: 15px; }
+      .global-nav .system-tray > div:first-child {
+        margin-left: 15px; }
+    .global-nav .system-tray .logo {
+      width: 30px;
+      overflow: hidden; }
+      .global-nav .system-tray .logo svg {
+        width: 30px;
+        height: 50px; }
+      .global-nav .system-tray .logo svg.vipLogo {
+        display: none;
+        color: #deb359; }
+      .global-nav .system-tray .logo svg.imvuLogo {
+        display: inline-block; }
+      .global-nav .system-tray .logo.logoVIP {
+        width: 40px;
+        height: 60px;
+        margin: 0 10px; }
+        .global-nav .system-tray .logo.logoVIP .vipLogo {
+          display: inline-block; }
+        .global-nav .system-tray .logo.logoVIP .imvuLogo {
+          display: none; }
+      .global-nav .system-tray .logo.logoVIP:hover {
+        opacity: 1; }
+  .global-nav li {
+    position: relative; }
+  .global-nav:not(.reveal-submode-specific) .submode-specific {
+    display: none; }
+  .global-nav > ul > li.active, .global-nav > ul > li.open-drawer {
+    color: #deb359;
+    fill: #deb359; }
+    .global-nav > ul > li.active > a, .global-nav > ul > li.open-drawer > a {
+      box-shadow: none;
+      color: #deb359;
+      fill: #deb359; }
+      .global-nav > ul > li.active > a:hover, .global-nav > ul > li.open-drawer > a:hover {
+        opacity: 1; }
+  .global-nav [data-count]:not([data-count='0'])::after {
+    display: block;
+    position: absolute;
+    top: 12.5%;
+    left: calc(100% - 10px);
+    content: attr(data-count);
+    color: #fff;
+    background-color: #deb359;
+    border-radius: 40px;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0; }
+  .global-nav [data-count]:not([data-count='0']):not([data-count='1']):not([data-count='2']):not([data-count='3']):not([data-count='4']):not([data-count='5']):not([data-count='6']):not([data-count='7']):not([data-count='8']):not([data-count='9'])::after {
+    padding: 0 2px; }
+  .global-nav [data-count]:not([data-count='0'])[data-count='99+']::after {
+    padding: 0 5px 0 4px !important; }
+
+.desktop .global-nav {
+  font-size: 12px;
+  font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff; }
+
+.mobile .global-nav {
+  transition: background 0.25s ease;
+  background: #404040; }
+  .mobile .global-nav.open {
+    z-index: 402; }
+
+.global-nav {
+  transition: opacity 0.075s;
+  opacity: 1; }
+  .global-nav.loading {
+    opacity: 0; }
+  .global-nav.hide {
+    display: none; }
+/*css!/unicorns_sections/welcome/js/dialog/privacy_policy/PrivacyPolicyMinorsGuardianDialog.css*/
+.privacy-policy-minors-guardian-dialog .dialog-body {
+  padding: 40px; }
+.privacy-policy-minors-guardian-dialog div {
+  text-align: center;
+  margin: 15px 0;
+  font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+  font-style: normal; }
+.privacy-policy-minors-guardian-dialog .privacy-policy-link {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 15px; }
+/*css!/unicorns_sections/welcome/js/dialog/privacy_policy/PrivacyPolicyMinorsDialog.css*/
+.privacy-policy-minors-dialog .dialog-body {
+  justify-content: flex-start; }
+.privacy-policy-minors-dialog .privacy-policy-minors-body {
+  text-align: center;
+  margin: 20px;
+  font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+  font-style: normal; }
+.privacy-policy-minors-dialog .privacy-policy-minors-form {
+  margin: 0 10px; }
+.privacy-policy-minors-dialog .privacy-policy-minors-form-title {
+  text-align: center; }
+.privacy-policy-minors-dialog .fieldset {
+  margin: 10px 0; }
+  .privacy-policy-minors-dialog .fieldset label {
+    margin: 15px 0 5px;
+    display: block;
+    text-transform: uppercase;
+    font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    cursor: none; }
+    .privacy-policy-minors-dialog .fieldset label span {
+      text-transform: lowercase;
+      font-family: "Gotham SSm 4r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: normal;
+      font-style: normal; }
+  .privacy-policy-minors-dialog .fieldset .input-note {
+    margin-top: 5px;
+    text-align: center; }
+  .privacy-policy-minors-dialog .fieldset .input-error {
+    margin-top: 5px;
+    text-align: center;
+    color: #ff374d; }
+.privacy-policy-minors-dialog .privacy-policy-link {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 15px; }
+/*css!/unicorns_sections/welcome/js/mixins/InputMixin.css*/
+.holder-label {
+  display: flex;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  .holder-label > .info {
+    flex-grow: 1;
+    transition: top 250ms;
+    position: relative;
+    top: 20px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    color: #a8a8a8;
+    text-align: left; }
+    .holder-label > .info.show-label {
+      visibility: visible;
+      top: 0px; }
+  .holder-label > .content {
+    flex-grow: 0;
+    flex-shrink: 0;
+    text-align: right; }
+
+.error > .holder-label {
+  text-transform: initial;
+  letter-spacing: 0px; }
+  .error > .holder-label > .info {
+    color: #ff374d; }
+/*css!/unicorns_sections/welcome/js/mode/landing/LoginDialog.css*/
+div[data-ui-role="modal-dialog"].login-dialog .svg-icon-app-store, div[data-ui-role="modal-dialog"].login-dialog .svg-icon-google-play {
+  width: 135px;
+  height: 40px; }
+div[data-ui-role="modal-dialog"].login-dialog .dialog-container {
+  background-color: #e5e5e5 !important; }
+  div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body {
+    padding-bottom: 0;
+    height: auto; }
+    div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body .message {
+      text-align: center;
+      padding: 30px 0 10px 0; }
+    div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form {
+      padding: 20px 0 20px 0; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form:not(.can-signup) .signup {
+        display: none; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form p {
+        margin: 0; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .label {
+        display: block;
+        position: relative;
+        padding: 0 100px 5px; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .label-first .holder-label {
+        cursor: default; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .label-second {
+        padding-bottom: 0;
+        margin-bottom: 2px; }
+        div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .label-second .holder-label {
+          display: none; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .label-forgot {
+        margin-bottom: 30px; }
+        div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .label-forgot .forgot-password-link {
+          text-transform: initial;
+          display: inline-block; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .label-log-in {
+        padding-bottom: 0;
+        margin-bottom: 2px; }
+        div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .label-log-in .btn-primary {
+          width: 100%; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .label-or {
+        color: #404040;
+        font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .label-fb .btn-fb {
+        width: 100%; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form input {
+        display: block;
+        width: 100%;
+        margin: 2px auto;
+        height: 40px;
+        line-height: normal;
+        font-size: 12px;
+        padding: 10px; }
+        div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form input[name="avatarname"] {
+          margin-top: 2px; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .signup {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #404040;
+        cursor: default;
+        height: 16px;
+        line-height: 16px;
+        margin: 30px 0 0 0; }
+        div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .signup .id-signup {
+          cursor: pointer; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .need-help {
+        display: block;
+        width: 100%;
+        text-align: center;
+        height: 16px;
+        line-height: 16px;
+        bottom: 15px;
+        margin-top: 16px; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .submit button {
+        display: block;
+        width: 235px;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 15px; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .submit .error-message {
+        display: block !important;
+        color: #ff374d;
+        text-align: center;
+        opacity: 1;
+        transition: all 0.8s ease;
+        height: auto;
+        overflow: hidden; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .submit .error-message:not(.active) {
+        height: 0px;
+        opacity: 0; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .text-spacing {
+        padding-top: 10px; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .toggle-password-visibility {
+        font-size: 20px;
+        color: #404040;
+        position: absolute;
+        right: 0;
+        top: calc(50% - 15px);
+        line-height: 30px;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        cursor: pointer;
+        display: none; }
+      div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .login_password input:focus + .toggle-password-visibility, div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .toggle-password-visibility:hover {
+        display: block; }
+
+.mobile div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .label {
+  padding: 0 60px 5px; }
+.mobile div[data-ui-role="modal-dialog"].login-dialog .dialog-container .dialog-body form .signup {
+  height: 32px; }
+/*css!/common/withme/js/dialog/tooltip/TooltipDialog.css*/
+.mobile .tooltip-dialog .dialog-header .dialog-title {
+  text-overflow: ellipsis;
+  max-width: calc(100% - 140px);
+  overflow: hidden; }
+.mobile .tooltip-dialog .dialog-body {
+  justify-content: flex-start;
+  padding: 0 15px; }
+  .mobile .tooltip-dialog .dialog-body .tooltip-header {
+    font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 15px 0 0 0; }
+  .mobile .tooltip-dialog .dialog-body .tooltip-body > div {
+    margin: 10px 0; }
+  .mobile .tooltip-dialog .dialog-body .tooltip-body ul {
+    margin-left: 25px; }
+    .mobile .tooltip-dialog .dialog-body .tooltip-body ul li {
+      list-style-type: disc;
+      padding-left: 5px; }
+  .mobile .tooltip-dialog .dialog-body .tooltip-body .icon-payment-csc {
+    font-size: 30px; }
+  .mobile .tooltip-dialog .dialog-body .tooltip-body .icon-ppc-tooltip {
+    font-size: 50px; }
+  .mobile .tooltip-dialog .dialog-body .tooltip-body span.or {
+    font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 500;
+    font-style: normal; }
+  .mobile .tooltip-dialog .dialog-body .tooltip-body .note {
+    color: #a8a8a8;
+    font-size: 10px; }
+.mobile .tooltip-dialog .vip-badge-tooltip-cta {
+  font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 15px; }
+/*css!/common/withme/js/widget/tooltip/Tooltip.css*/
+.tooltip {
+  transition: opacity 0.07s;
+  position: absolute;
+  width: 300px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  text-transform: none;
+  pointer-events: none;
+  opacity: 0;
+  /* XXXcrr: UiContext will trigger:
+       "Tried to trigger a "hidden" event on a *visible* element." if we only
+       use opacity here, when clicking Username instead of VIP Badge in the
+       account drawer. So, tooltips will not have the brief opacity fade until
+       we figure out what's going on there. */
+  display: none;
+  box-shadow: inset 0 0 0 1px #eaeaea;
+  overflow: hidden; }
+  .tooltip.tooltip-snug {
+    width: auto;
+    white-space: nowrap;
+    padding: 10px; }
+  .tooltip .tooltip-header {
+    font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: capitalize; }
+  .tooltip .tooltip-body > div {
+    margin: 10px 0; }
+  .tooltip .tooltip-body ul {
+    margin-left: 25px; }
+    .tooltip .tooltip-body ul li {
+      list-style-type: disc;
+      padding-left: 5px; }
+  .tooltip .tooltip-body .icon-payment-csc {
+    font-size: 30px; }
+  .tooltip .tooltip-body .icon-ppc-tooltip {
+    font-size: 50px; }
+  .tooltip .tooltip-body span.or {
+    font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 500;
+    font-style: normal; }
+  .tooltip .tooltip-body .note {
+    color: #a8a8a8;
+    font-size: 10px; }
+  .tooltip.tooltip-wide {
+    width: 400px; }
+  .tooltip .cookie-tooltip {
+    height: 400px;
+    overflow-y: scroll; }
+/*css!/unicorns_sections/welcome/js/dialog/privacy_policy/PrivacyPolicyMinorsPendingDialog.css*/
+.privacy-policy-minors-pending-dialog .copy-body {
+  text-align: center;
+  margin: 40px;
+  font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+  font-style: normal; }
+.privacy-policy-minors-pending-dialog .privacy-policy-link {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 15px; }
+/*css!/unicorns_sections/welcome/js/dialog/privacy_policy/PrivacyPolicyAdultDialog.css*/
+.privacy-policy-adult-dialog .copy-body {
+  text-align: center;
+  margin: 40px;
+  font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+  font-style: normal; }
+.privacy-policy-adult-dialog .privacy-policy-link {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 15px; }
+.privacy-policy-adult-dialog .accept-button {
+  margin-top: 80px;
+  width: 100%;
+  text-align: center; }
+/*css!/unicorns_sections/welcome/desktop/js/nav/LoggedOutTopNav.css*/
+.global-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  min-width: 900px; }
+  .global-nav.wider {
+    min-width: 970px; }
+  .global-nav .main-nav, .global-nav .secondary-nav {
+    height: 50px; }
+  .global-nav .main-nav {
+    overflow: hidden; }
+    .global-nav .main-nav > li {
+      text-align: center; }
+  .global-nav .secondary-nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    color: #a8a8a8; }
+    .global-nav .secondary-nav > .sign-in {
+      font-size: 12px;
+      pointer-events: auto;
+      font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      margin-right: 15px;
+      letter-spacing: 1px; }
+    .global-nav .secondary-nav button {
+      display: block; }
+    .global-nav .secondary-nav .have-an-account {
+      font-size: 12px;
+      font-family: "Gotham SSm 4r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      text-transform: none;
+      padding-right: 5px;
+      letter-spacing: 0px; }
+    .global-nav .secondary-nav.hidden {
+      display: none; }
+  .global-nav .logo {
+    cursor: pointer; }
+/*css!/common/waf/js/ModeManager.css*/
+#imvu .mode-container {
+  padding-top: 100px;
+  margin-top: 0px; }
+  #imvu .mode-container.no-navs {
+    padding-top: 0; }
+  #imvu .mode-container.no-subnav {
+    padding-top: 50px; }
+  #imvu .mode-container > .mode > .submodes {
+    z-index: 100;
+    padding-bottom: 30px; }
+#imvu .mode-container.is-permalink {
+  padding-top: 50px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; }
+  #imvu .mode-container.is-permalink .mode {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px; }
+    #imvu .mode-container.is-permalink .mode .submodes {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      margin-top: 0px; }
+      #imvu .mode-container.is-permalink .mode .submodes .submode {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px; }
+        #imvu .mode-container.is-permalink .mode .submodes .submode .room-detail-widget {
+          position: absolute;
+          top: 50px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px; }
+        #imvu .mode-container.is-permalink .mode .submodes .submode .column-container {
+          display: none; }
+
+body.mobile #imvu .mode-container {
+  overflow-x: hidden;
+  padding-top: 50px; }
+  body.mobile #imvu .mode-container > .mode > .submodes {
+    top: 0px;
+    margin-top: 50px;
+    padding-bottom: inherit; }
+    body.mobile #imvu .mode-container > .mode > .submodes .submode .room-detail-widget {
+      top: 0px; }
+body.mobile #imvu .mode-container.no-subnav .submodes {
+  margin-top: 0px; }
+body.mobile #imvu .mode-container.is-permalink {
+  padding-top: 0; }
+body.mobile #imvu .mode-container.filters-backbar-hack {
+  padding-top: 0; }
+  body.mobile #imvu .mode-container.filters-backbar-hack .submodes {
+    margin-top: 13px; }
+/*css!/common/withme/js/dialog/invite/InviteDialog.css*/
+[data-ui-role="modal-dialog"].invite-dialog .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; }
+  [data-ui-role="modal-dialog"].invite-dialog .row .profile-icon, [data-ui-role="modal-dialog"].invite-dialog .row .room-icon {
+    flex-shrink: 0; }
+  [data-ui-role="modal-dialog"].invite-dialog .row .room-icon {
+    width: 30px;
+    height: 30px; }
+  [data-ui-role="modal-dialog"].invite-dialog .row .details {
+    margin-left: 10px; }
+/*css!/common/withme/js/widget/imqStatus/ImqStatus.css*/
+.imq-status {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  padding: 5px;
+  color: #fff;
+  background-color: #ff374d;
+  transition: opacity 1s ease-in 0s; }
+  .imq-status.connecting {
+    background-color: #deb359; }
+    .imq-status.connecting .timer, .imq-status.connecting button.retry {
+      display: none; }
+  .imq-status.connected {
+    background-color: #00FF9C;
+    opacity: 0; }
+    .imq-status.connected .timer, .imq-status.connected button.retry {
+      display: none; }
+  .imq-status .status {
+    margin: 0px; }
+  .imq-status .timer {
+    margin: 5px 0px 0px 0px; }
+/*css!/unicorns_sections/welcome/js/mode/landing/LoginFBErrorDialog.css*/
+.login-fb-error-dialog .dialog-container .dialog-body {
+  padding-bottom: 0;
+  height: auto; }
+  .login-fb-error-dialog .dialog-container .dialog-body .login_fb_error_form {
+    margin: 0;
+    padding: 0;
+    background-color: #404040; }
+    .login-fb-error-dialog .dialog-container .dialog-body .login_fb_error_form .label {
+      margin: 0;
+      padding: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: #fff; }
+    .login-fb-error-dialog .dialog-container .dialog-body .login_fb_error_form .error_exclamation {
+      margin-top: 30px;
+      font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 16px; }
+    .login-fb-error-dialog .dialog-container .dialog-body .login_fb_error_form .error_explanation {
+      margin-top: 10px;
+      font-family: "Gotham SSm 4r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 12px; }
+    .login-fb-error-dialog .dialog-container .dialog-body .login_fb_error_form .label-email {
+      margin-top: 100px;
+      font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 16px;
+      text-transform: uppercase; }
+      .login-fb-error-dialog .dialog-container .dialog-body .login_fb_error_form .label-email .btn-primary {
+        width: 100%; }
+    .login-fb-error-dialog .dialog-container .dialog-body .login_fb_error_form .label-or {
+      margin-top: 10px;
+      font-family: "Gotham SSm 4r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 12px; }
+    .login-fb-error-dialog .dialog-container .dialog-body .login_fb_error_form .label-fb {
+      margin-top: 10px;
+      font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 30px; }
+      .login-fb-error-dialog .dialog-container .dialog-body .login_fb_error_form .label-fb .btn-fb {
+        width: 100%; }
+/*css!/unicorns_sections/welcome/js/mode/landing/LoginFBBannedDialog.css*/
+.login-fb-banned-dialog .dialog-container .dialog-body {
+  padding-bottom: 0;
+  height: auto; }
+  .login-fb-banned-dialog .dialog-container .dialog-body .login_fb_banned_form {
+    margin: 0;
+    padding: 0;
+    background-color: #404040; }
+    .login-fb-banned-dialog .dialog-container .dialog-body .login_fb_banned_form .label {
+      margin: 0;
+      padding: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: #fff; }
+    .login-fb-banned-dialog .dialog-container .dialog-body .login_fb_banned_form .banned_exclamation {
+      margin-top: 30px;
+      font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 16px; }
+    .login-fb-banned-dialog .dialog-container .dialog-body .login_fb_banned_form .banned_explanation {
+      margin-top: 10px;
+      font-family: "Gotham SSm 4r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 12px; }
+    .login-fb-banned-dialog .dialog-container .dialog-body .login_fb_banned_form .label-email {
+      margin-top: 100px;
+      font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 16px;
+      text-transform: uppercase; }
+      .login-fb-banned-dialog .dialog-container .dialog-body .login_fb_banned_form .label-email .btn-primary {
+        width: 100%; }
+    .login-fb-banned-dialog .dialog-container .dialog-body .login_fb_banned_form .label-or {
+      margin-top: 10px;
+      font-family: "Gotham SSm 4r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 12px; }
+    .login-fb-banned-dialog .dialog-container .dialog-body .login_fb_banned_form .label-fb {
+      margin-top: 10px;
+      font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 30px; }
+      .login-fb-banned-dialog .dialog-container .dialog-body .login_fb_banned_form .label-fb .btn-fb {
+        width: 100%; }
+/*css!/unicorns_sections/welcome/js/mode/landing/SocialLoginServiceFailureDialog.css*/
+.social-login-service-failure-dialog .dialog-container .dialog-body {
+  padding-bottom: 0;
+  height: 130px; }
+  .social-login-service-failure-dialog .dialog-container .dialog-body .social_login_service_failure_form {
+    margin: 0;
+    padding: 0;
+    background-color: #404040; }
+    .social-login-service-failure-dialog .dialog-container .dialog-body .social_login_service_failure_form .label {
+      margin: 0;
+      padding: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: #fff; }
+    .social-login-service-failure-dialog .dialog-container .dialog-body .social_login_service_failure_form .failure_warning {
+      margin-top: 40px;
+      font-family: "Gotham SSm 5r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 16px;
+      color: #deb359; }
+    .social-login-service-failure-dialog .dialog-container .dialog-body .social_login_service_failure_form .failure_prompt {
+      margin-top: 10px;
+      margin-bottom: 40px;
+      font-family: "Gotham SSm 4r", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 12px; }
+/*css!/common/waf/js/manager/ContextMenuManager.css*/
+.context-menu-manager {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 700;
+  width: 100%;
+  height: 100%;
+  display: none; }
+  .context-menu-manager.in-use {
+    display: block; }
+  .context-menu-manager > .context-menu {
+    min-width: 150px;
+    position: absolute;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); }
+    .context-menu-manager > .context-menu .header, .context-menu-manager > .context-menu .header:hover {
+      text-align: center;
+      font-size: 10px;
+      color: #404040;
+      background: rgba(255, 255, 255, 0.75);
+      cursor: default;
+      opacity: 1; }
+    .context-menu-manager > .context-menu li {
+      cursor: pointer;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.95); }
+      .context-menu-manager > .context-menu li:hover, .context-menu-manager > .context-menu li:active {
+        background: #404040;
+        color: #fff; }
+      .context-menu-manager > .context-menu li.disabled {
+        opacity: 1;
+        color: rgba(168, 168, 168, 0.5);
+        cursor: not-allowed; }
+        .context-menu-manager > .context-menu li.disabled:hover, .context-menu-manager > .context-menu li.disabled:active {
+          background: rgba(255, 255, 255, 0.95);
+          color: rgba(168, 168, 168, 0.5); }
+      .context-menu-manager > .context-menu li.divider {
+        border-bottom: 1px solid #eaeaea; }
+/*css!/common/waf/js/widget/simpleScroller/SimpleScroller.css*/
+.simple-scroller {
+  overflow-y: auto; }
+  .simple-scroller .simple-scroller-viewport {
+    position: relative;
+    white-space: nowrap;
+    height: 100px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    transition: all 0.15s; }
+  .simple-scroller .simple-scroller-target {
+    overflow-x: auto !important;
+    display: inline-block; }
+  .simple-scroller .simple-scroller-left.simple-scroller-left.simple-scroller-left, .simple-scroller .simple-scroller-right.simple-scroller-right.simple-scroller-right {
+    height: 50px;
+    font-size: 15px;
+    line-height: 50px;
+    max-height: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 200; }
+    .simple-scroller .simple-scroller-left.simple-scroller-left.simple-scroller-left[disabled], .simple-scroller .simple-scroller-right.simple-scroller-right.simple-scroller-right[disabled] {
+      opacity: 0; }
+  .simple-scroller .simple-scroller-left {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .simple-scroller .simple-scroller-left::before {
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .simple-scroller .simple-scroller-left::before {
+      content: "\e642"; }
+  .simple-scroller .simple-scroller-right {
+    position: absolute;
+    top: 0;
+    right: -1px; }
+    .simple-scroller .simple-scroller-right::before {
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .simple-scroller .simple-scroller-right::before {
+      content: "\e643"; }
+
+@media only screen and (max-width: 1019px) {
+  .mobile .simple-scroller {
+    -webkit-overflow-scrolling: touch; }
+    .mobile .simple-scroller .simple-scroller-left, .mobile .simple-scroller .simple-scroller-right {
+      display: none; } }
+
+.mobile nav .simple-scroller .simple-scroller-viewport {
+  height: 50px; }
+
+.small-simple-scroller .simple-scroller {
+  overflow-y: hidden;
+  height: 24px; }
+  .small-simple-scroller .simple-scroller .simple-scroller-viewport {
+    width: 100%;
+    margin: 0 auto; }
+  .small-simple-scroller .simple-scroller .simple-scroller-left.simple-scroller-left.simple-scroller-left, .small-simple-scroller .simple-scroller .simple-scroller-right.simple-scroller-right.simple-scroller-right {
+    min-height: 20px;
+    max-height: 20px;
+    line-height: 20px;
+    height: 20px;
+    width: 20px;
+    padding: 1px; }
+    .small-simple-scroller .simple-scroller .simple-scroller-left.simple-scroller-left.simple-scroller-left[disabled], .small-simple-scroller .simple-scroller .simple-scroller-right.simple-scroller-right.simple-scroller-right[disabled] {
+      display: none; }
+
+.dark-theme .small-simple-scroller .simple-scroller .simple-scroller-left.simple-scroller-left.simple-scroller-left, .dark-theme .simple-scroller .simple-scroller-left.simple-scroller-left.simple-scroller-left {
+  background: none;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75) 75%, rgba(0, 0, 0, 0)); }
+.dark-theme .small-simple-scroller .simple-scroller .simple-scroller-right.simple-scroller-right.simple-scroller-right, .dark-theme .simple-scroller .simple-scroller-right.simple-scroller-right.simple-scroller-right {
+  background: none;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.75) 75%, rgba(0, 0, 0, 0)); }
+.dark-theme .simple-scroller, .dark-theme .small-simple-scroller {
+  color: #fff;
+  background: none; }
+/*css!/common/withme/js/manager/CardDeckDialog.css*/
+[data-ui-role="modal-dialog"].card-deck-dialog {
+  display: block;
+  overflow: visible; }
+  [data-ui-role="modal-dialog"].card-deck-dialog .dialog-container {
+    background: rgba(0, 0, 0, 0); }
+  [data-ui-role="modal-dialog"].card-deck-dialog .dialog-body {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    display: block;
+    position: absolute; }
+  [data-ui-role="modal-dialog"].card-deck-dialog .simple-scroller .simple-scroller-viewport {
+    width: 100%;
+    margin: 0;
+    overflow: hidden; }
+
+.desktop [data-ui-role="modal-dialog"].card-deck-dialog {
+  padding-bottom: 0; }
+  .desktop [data-ui-role="modal-dialog"].card-deck-dialog .dialog-x {
+    left: calc(50% - 150.5px); }
+  .desktop [data-ui-role="modal-dialog"].card-deck-dialog .dialog-body {
+    padding-left: calc(50% - 150.5px);
+    padding-right: calc(50% - 150.5px); }
+  .desktop [data-ui-role="modal-dialog"].card-deck-dialog .simple-scroller .simple-scroller-viewport {
+    height: 520px; }
+  .desktop [data-ui-role="modal-dialog"].card-deck-dialog .simple-scroller .simple-scroller-right, .desktop [data-ui-role="modal-dialog"].card-deck-dialog .simple-scroller .simple-scroller-left {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 400; }
+    .desktop [data-ui-role="modal-dialog"].card-deck-dialog .simple-scroller .simple-scroller-right .simple-scroller-right, .desktop [data-ui-role="modal-dialog"].card-deck-dialog .simple-scroller .simple-scroller-left .simple-scroller-right {
+      right: 0; }
+    .desktop [data-ui-role="modal-dialog"].card-deck-dialog .simple-scroller .simple-scroller-right .simple-scroller-left, .desktop [data-ui-role="modal-dialog"].card-deck-dialog .simple-scroller .simple-scroller-left .simple-scroller-left {
+      left: 0; }
+
+.desktop [data-ui-role="modal-dialog"].card-deck-dialog {
+  width: 100%;
+  max-width: 100%; }
+
+.mobile [data-ui-role="modal-dialog"].card-deck-dialog {
+  height: calc(100% - 100px);
+  width: calc(100% - 50px); }
+  .mobile [data-ui-role="modal-dialog"].card-deck-dialog .dialog-container {
+    padding: 0; }
+  .mobile [data-ui-role="modal-dialog"].card-deck-dialog .simple-scroller, .mobile [data-ui-role="modal-dialog"].card-deck-dialog .simple-scroller .simple-scroller-viewport {
+    height: 100%; }
+  .mobile [data-ui-role="modal-dialog"].card-deck-dialog .dialog-body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; }
+  .mobile [data-ui-role="modal-dialog"].card-deck-dialog.has-multi-cards {
+    width: 100%; }
+    .mobile [data-ui-role="modal-dialog"].card-deck-dialog.has-multi-cards .dialog-body:before, .mobile [data-ui-role="modal-dialog"].card-deck-dialog.has-multi-cards .dialog-body:after {
+      width: 25px;
+      height: 100%;
+      display: inline-block;
+      content: ' '; }
+/*css!/unicorns_sections/welcome/css/main.css*/
+/* override base withme styling for easier reintegration */
+.loading-progress .progress .bar {
+  background-color: rgba(222, 179, 89, 0.3) !important;
+  height: 25px !important;
+  border-radius: 0px !important; }
+
+.loading-progress .progress .border {
+  display: none; }
+
+.loading-progress .progress .percentage {
+  user-select: none;
+  cursor: default; }
+
+.desktop .submode-ftux.ftux-layout:not(.is2d) .ftux-body {
+  top: 50px !important; }
+
+.welcome-funcaptcha-loader {
+  display: none; }
