@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>Clan d'éris </title>
+  <link rel="stylesheet" href="src/bootstrap.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="src/normalize.css">
+  <link rel="stylesheet" href="src/bootstrap.css">
+
+      <style>
+      @import 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900';
+body, html {
+  min-height: 100%;
+}
+
+body {
+  background-image: linear-gradient(45deg, rgb(200,20,0) 0%,  	rgb(200,90,0) 100%);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  font-family: "Lato", sans-serif;
+}
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.container {
+  background: #25272C;
+  min-height: 100%;
+  padding: 0;
+}
+
+.header {
+  height: 550px;
+  width: 100%;
+  background: url("../img/top.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.header:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  background-image: linear-gradient(45deg, rgb(0,0,0) 0%,  	rgb(75,0,130) 100%);
+}
+
+.topmenu {
+  position: relative;
+  z-index: 20;
+  margin-top: 20px;
+}
+.topmenu a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 0 27px;
+  text-decoration: none;
+}
+.topmenu .line {
+  display: block;
+  width: 45px;
+  border-bottom: 1px solid #fff;
+}
+
+.server-info {
+  margin-bottom: 150px;
+  position: relative;
+  z-index: 20;
+}
+
+.inner {
+  padding: 40px;
+}
+
+section .image {
+  width: 300px;
+  min-height: 480px;
+  margin: 40px;
+  background-position: center center;
+  background-size: cover;
+}
+section .image.image1 {
+  background-image: url("https://cdn.discordapp.com/attachments/361247601401659398/527458632175190025/telechargement.png");
+}
+section .image.image2 {
+  background-image: url("src/branches.png");
+}
+section .text {
+  padding: 40px;
+  max-width: 700px;
+}
+section .text p {
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.5);
+}
+section .text p b {
+  color: #fff;
+  font-weight: 700;
+}
+section .text ul {
+  color: #fff;
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+section .text ul li {
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  padding: 0;
+}
+section .text ul li b {
+  color: #fff;
+  font-weight: 700;
+}
+section.discord-widget {
+  padding: 40px;
+  width: 100%;
+}
+section.discord-widget iframe {
+  height: 500px;
+  width: 100%;
+}
+section.join {
+  padding: 40px;
+}
+section.join .btn-pill {
+  margin: 30px;
+}
+section.join .line {
+  border-bottom: 1px solid #fff;
+}
+
+.footer {
+  padding: 40px;
+  background-color: #25272C;
+  background-image: url("https://cdn.discordapp.com/attachments/361247601401659398/527458119744356372/af0f72d274c2fb7a35e7f4a36255e6482e6d4ec1_1512767732_crop_3x2_1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  line-height: 24px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 300;
+}
+.footer .block {
+  min-height: 200px;
+  margin-right: 80px;
+}
+.footer p {
+  max-width: 500px;
+  padding-top: 40px;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 68px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 86px;
+  margin: 0 0 35px 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 57px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 44px;
+  color: #fff;
+  font-weight: 900;
+  padding: 0;
+  margin-bottom: 6px;
+}
+h4 {
+  font-size: 15px;
+  line-height: 33px;
+  color: #fff;
+  font-weight: 900;
+  padding: 0;
+  margin-bottom: 7px;
+}
+
+.btn-pill {
+  height: 50px;
+  padding: 0 100px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.28);
+  border-radius: 100px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  position: relative;
+  transition: all 300ms ease;
+  bottom: 0;
+}
+.btn-pill:hover {
+  bottom: 10px;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.28);
+}
+.btn-pill.white {
+  background: #fff;
+  color: #4360AE;
+}
+
+a.links-suppressor, .links-suppressor a {
+  text-decoration: none;
+}
+.bruh {
+	line-height: 150%;
+}
+    </style>
+
+
+
+
+</head>
+
+<body translate="no">
+
+  
+<div class="container d-flex flex-column">
+  <div class="header d-flex flex-column justify-content-between align-items-center">
+    <nav class="topmenu d-flex justify-content-center"><a href="#histoire">Histoire</a>
+      <div class="line align-self-center"></div><a href="#Branches">Branches</a>
+      <div class="line align-self-center"></div><a href="https://discordapp.com/invite/NtGMc9y">Rejoindre</a>
+    </nav>
+    <div class="server-info d-flex align-items-center flex-column text-center">
+      <h1>Le clan d'éris:</h1><a class="links-suppressor join-btn btn-pill white" href="https://discordapp.com/invite/NtGMc9y">Rejoindre!</a>
+
+    </div>
+
+  </div>
+  <div class="inner d-flex flex-column">
+    <section class="d-flex justify-content-between flex-lg-nowrap flex-wrap" id="histoire">
+      <div class="image image1" style="flex-grow: 1;"></div>
+      <div class="text">
+        <h2>Histoire</h2>
+        <p><b>Clan d'éris:<br></b>&nbsp;Il y a de cela des années le portail d'Inéfis eut été en danger. Les pierres d'Eris qui le maintenaient en vie étaient convoités par plusieurs royaumes et empire qui voulaient fermer ce portail pour en créer de nouveaux. Des portails personnels qui si entre de mauvaises mains pouvaient bien faire basculer la face du monde d'Inéfis.
+Face à ce danger pour le moins nouveau un homme bâtit une guilde qui protégerai ces pierres : La Confrérie d'Eris.
+Nous voilà maintenant en ce temps de guerre où chaque royaumes, chaque empire et chaque territoire veut celui de son voisin. Chacune de ces parties devient alors une potentiel menace pour les pierres.
+Que fera alors la Confrérie face à cette nouvelle menace ?<br><br><b>Généraux:</b><br></p>
+        <ul>
+          <li>Karma.#3725</li>
+          <li>Adrusse#5104</li>
+          <li>enfert#4667</li>
+        </ul>
+        <br>
+        <a class="links-suppressor join-btn btn-pill white" href="carte/">Carte</a>
+        <a class="links-suppressor join-btn btn-pill white" href="bestiaire/">Bestiaire</a>
+      </div>
+    </section>
+    <section class="discord-widget">
+<iframe src="https://discordapp.com/widget?id=449648127054708741&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+    </section>
+    <section class="d-flex justify-content-between flex-lg-nowrap flex-wrap flex-row-reverse" id="Branches">
+      <div class="image image2" style="flex-grow: 1;"></div>
+      <div class="text">
+        <h2>Les branches</h2>
+        <p><b>Branche des Armées :</b>&nbsp;Cette partie de la Confrérie d'Eris est la lance et le bouclier de la guilde. C'est la Branche d'Eris qui est la plus peuplée de la Confrérie. Les soldats sont répartis en deux parties commandées par deux sous-généraux qui sont dirigés eux-mêmes par un général.<br><br>
+        <b>Branche des Renseignements :</b> C'est le cerveau de la Confrérie. Ses membres sont destinés à être des espions et des diplomates. C'est l'une des branches essentielles de la Confrérie afin d'avoir de bonnes relations avec les guildes alliées et pour éviter de se faire plus d'ennemis qu'il n'en faut. Ils sont les membres d'Eris qui partiront le plus d'Inéfis.
+        <br><br>
+    	<b>Branche des Créations :</b> Le marteau et l'enclume d'Eris ! Ils sont responsables de la forge, de la collecte de ressources ainsi que du commerce avec l'extérieur. Ils sont intrinsèquement lié à la branche des renseignements afin de faire des liens avec le monde d'Inéfis.</p>
+      </div>
+    </section>
+    <section class="join d-flex justify-content-center">
+      <div class="line align-self-center" style="flex-grow: 1;"></div><a class="links-suppressor btn-pill white" href="https://discord.gg/red">Rejoindre le serveur</a>
+      <div class="line align-self-center" style="flex-grow: 1;"></div>
+    </section>
+  </div>
+  <div class="footer d-flex justify-content-between flex-lg-nowrap flex-wrap">
+    <div class="d-flex">
+      <div class="block d-flex flex-column justify-content-between">
+        <h3 class="d-flex"><!--TEXTE--></h3>
+        <span><!--TEXTE--></span>
+        <span><!--TEXTE--></span>
+        <span><!--TEXTE--></span>
+      </div>
+      <div class="block d-flex flex-column justify-content-between">
+        <h3 class="d-flex"><!--TEXTE--></h3>
+        <span><!--TEXTE--></span>
+        <span><!--TEXTE--></span>
+        <span><!--TEXTE--></span>
+      </div>
+    </div>
+    <p class="align-self-end">Fait par KyaBoomy</p>
+    <!--Template source: https://github.com/orels1/landing-discord-red -->
+  </div>
+</div>
+<script src="src/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a7540685.js"></script>
+
+</body></html>
